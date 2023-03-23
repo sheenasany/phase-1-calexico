@@ -3,6 +3,10 @@ const menuDiv = document.querySelector('#menu-items')
 const dishDiv = document.querySelector('#dish')
 const cartForm = document.querySelector('#cart-form')
 let cartNum = document.querySelector('#number-in-cart')
+//initially could us data.number_in_bag value, but it's wonky since they all start at zero
+//if you were to add that item to the cart, and click to another item, it
+//will only account for the item that has been clicked, so the cart will not persist
+//instead, made the cart and the price global at 0
 let globalCartNum = 0
 let globalPrice = 0
 let currentMenuItem = {}
